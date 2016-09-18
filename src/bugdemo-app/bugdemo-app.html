@@ -1,0 +1,56 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+
+<dom-module id="bugdemo-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      div#scrollable {
+        overflow-y: scroll;
+      }
+    </style>
+    <paper-dialog id="dialog">
+      <h2>Scrolling PaperInputs</h2>
+      <div id="scrollable">
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+        <paper-input></paper-input>
+      </div>
+      <div class="buttons">
+        <paper-button dialog-dismiss="">Close</paper-button>
+      </div>
+    </paper-dialog>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'bugdemo-app',
+
+      properties: {
+      },
+      attached: function() {
+        this.$.dialog.sizingTarget = this.$.scrollable;
+        this.$.dialog.open();
+      },
+
+    });
+  </script>
+</dom-module>

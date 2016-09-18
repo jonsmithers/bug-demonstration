@@ -1,0 +1,7 @@
+{
+  "name": "bugdemo",
+  "short_name": "bugdemo",
+  "description": "demonstrating a bug",
+  "start_url": "/",
+  "display": "standalone"
+}
